@@ -1,7 +1,7 @@
 from algos.linear.dynamic import DynamicArray
 
 class Stack(DynamicArray):
-    """The stack clas """
+    """The stack class """
     def push(self,value):
         self.append(value)
     def pop(self,value):

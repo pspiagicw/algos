@@ -1,8 +1,9 @@
-def BubbleSort(input_array):
+def BubbleSort(array):
     """This is the implementation of BubbleSort"""
-    for i in range(len(input_array)):
-        for j in range(len(input_array) - i):
-            if input_array[j] > input_array[j+1]:
-                input_array[j+1] , input_array[j] = input_array[j] , input_array[j+1]
-        return input_array
+    for i in range(len(array)):
+        for j in range(0,len(array) -i -1):
+            if array[j] > array[j+1]:
+                array[j] , array[j+1] = array[j+1] , array[j]
+
+    return array
 

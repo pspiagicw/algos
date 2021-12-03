@@ -1,5 +1,6 @@
 from algos.linear.array import Array
 from algos.errors.array_errors import IndexOutOfBoundsException,TypeException
+from algos.search.linear import LinearSearch
 
 class DynamicArray:
     def __init__(self,input_type):
@@ -22,7 +23,7 @@ class DynamicArray:
     def append(self,value):
         if (self.nums / self.max_index ) > 0.7:
             self.new_array = Array((self.max_index+1)*2,self.array_type)
-            for i in range(len(self.array)):
+            for i in range(self.nums):
                 self.new_array[i] = self.array[i]
             self.max_index = self.max_index * 2
             self.array = self.new_array
@@ -64,6 +65,23 @@ class DynamicArray:
             self.append(other_array[i])
     def gettype(self):
         return self.array_type
+    def index(self):
+        index = LinearSearch(self.array)
+        if index > self.nums:
+            return -1
+        return index
+    def to_array(self):
+        array = list()
+        for i in range(self.nums):
+            array.append(self.array[i])
+        return array
+    def __str__(self):
+        string = ""
+        for i in range(self.nums):
+            string += str(array[i])
+            string += " "
+        return string
+        
 
 
 

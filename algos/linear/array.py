@@ -8,7 +8,7 @@ class Array:
     def __init__(self,length,array_type):
         self.length = length
         self.max_index = length-1
-        self.array = [ random.randint(3,100) for _ in range(length) ]
+        self.array = [ None for _ in range(length) ]
         self.array_type = array_type
     def get(self,index:int) -> 'Array Type':
         if index > self.max_index:
@@ -29,14 +29,14 @@ class Array:
     def __setitem__(self,index:int,value) -> None:
         self.set(index,value)
     def __str__(self):
+        string = ""
         for i in self.array:
-            print(i,end=' ')
-        print()
+            string += str(array[i])
+            string += " "
+        return string
     def to_array(self):
         return self.array
     def __len__(self):
         return self.length
     def gettype(self):
         return self.array_type
-
-
