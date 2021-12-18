@@ -1,11 +1,12 @@
 from algos.linear.dynamic import DynamicArray
 
-def BinarySearch(input_array,element):
+
+def BinarySearch(input_array, element):
     """ The implementation of Binary Search"""
     high = len(input_array)
     low = 0
     while low < high:
-        middle = ( high + low ) // 2
+        middle = (high + low) // 2
         if input_array[middle] == element:
             return middle
         if element < input_array[middle]:

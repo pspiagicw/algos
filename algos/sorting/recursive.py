@@ -1,13 +1,13 @@
 from algos.linear.dynamic import DynamicArray
 
+
 def QuickSort(input_array):
     """This is an implementation of QuickSort"""
     if len(input_array) < 2:
         return input_array
-    middle = len(input_array) // 2;
+    middle = len(input_array) // 2
     bigger = DynamicArray(input_array.gettype())
     smaller = DynamicArray(input_array.gettype())
-    
 
     index = 0
     while index < len(input_array):
@@ -23,4 +23,3 @@ def QuickSort(input_array):
     smaller = QuickSort(smaller)
     smaller.extend(element)
     return smaller
-

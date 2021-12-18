@@ -1,11 +1,12 @@
 from algos.linear.dynamic import DynamicArray
 
+
 class Stack(DynamicArray):
     """The stack class """
-    def push(self,value):
+    def push(self, value):
         self.append(value)
-    def pop(self,value):
+
+    def pop(self, value):
         end_value = self.array[self.nums]
         self.remove(self.nums)
         return end_value
-
